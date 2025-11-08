@@ -5,7 +5,16 @@ import Icon from "@/components/ui/icon";
 import { useState } from "react";
 
 const Index = () => {
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [hoveredComponent, setHoveredComponent] = useState<string | null>(null);
+
+  const pcComponents = [
+    { id: "cpu", name: "Процессор", icon: "Cpu", position: "top-[20%] left-[30%]" },
+    { id: "gpu", name: "Видеокарта", icon: "Cpu", position: "top-[45%] left-[25%]" },
+    { id: "ram", name: "ОЗУ", icon: "MemoryStick", position: "top-[25%] right-[30%]" },
+    { id: "ssd", name: "SSD", icon: "HardDrive", position: "top-[55%] right-[25%]" },
+    { id: "psu", name: "Блок питания", icon: "Zap", position: "bottom-[15%] left-[35%]" },
+    { id: "cooling", name: "Охлаждение", icon: "Wind", position: "top-[15%] left-[50%]" },
+  ];
 
   const categories = [
     { name: "Видеокарты", icon: "Cpu", color: "from-green-500 to-emerald-500" },
